@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\Win32\Debug\TestProject.exe" total="18" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2019-06-17" time="0.002">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="TestProject.exe" executed="true" result="Success" success="True" time="0.002" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="TestUnit2" executed="true" result="Success" success="True" time="0.002" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TestTAvaliacao" executed="True" result="Success" success="True" time="0.002" >
+                <results>
+                  <test-case name="TestCalculaIMC" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test00" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test01" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test02" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test03" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test04" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestCalculaIMC_Automatico.Test05" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestIMCIdadeMenor18" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test01" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test02" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test03" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test04" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test05" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test06" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test07" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test08" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test09" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestRetornaClassificacaoIMC.Test10" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

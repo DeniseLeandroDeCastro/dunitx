@@ -1,0 +1,14 @@
+unit Excecoes;
+
+interface
+
+uses
+  Dialogs, SysUtils;
+
+type
+  EFaixaEtaria = Class(Exception);
+
+implementation
+
+end.
+

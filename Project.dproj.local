@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/03/22 18:49:10.000.812,=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/03/22 18:49:24.000.429,=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/03/22 18:51:20.000.907,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Unit2.pas=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/03/22 18:51:22.000.500,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Unit1.dfm=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2016/03/22 18:51:22.000.500,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Unit1.pas=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/03/22 18:51:42.000.820,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Project.dproj=C:\Users\Guilherme\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2016/03/23 15:54:28.000.087,=D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Unit3.pas</Transaction>
+    <Transaction>2016/03/23 15:55:01.000.604,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Excecoes.pas=D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Unit3.pas</Transaction>
+    <Transaction>2016/03/23 16:30:38.000.755,=D:\Desenvolvimento\Projetos\Delphi\Nova pasta\TestUnit1.pas</Transaction>
+    <Transaction>2016/03/23 16:37:24.000.018,D:\Desenvolvimento\Projetos\Delphi\Nova pasta\Excecoes.pas=</Transaction>
+    <Transaction>2019/06/02 09:33:07.000.402,C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\uFrmIMC.dfm=C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\Unit1.dfm</Transaction>
+    <Transaction>2019/06/02 09:33:07.000.402,C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\uFrmIMC.pas=C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/06/02 09:33:51.000.718,C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\uIMCAvaliacao.pas=C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\Unit2.pas</Transaction>
+    <Transaction>2019/06/02 09:35:45.000.155,C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\Unit2.pas=C:\Users\dmari\Documents\AtalhosDaAreaDeTrabalho\DUNITX\2. TestesUnitarios\uIMCAvaliacao.pas</Transaction>
+  </Transactions>
+</BorlandProject>

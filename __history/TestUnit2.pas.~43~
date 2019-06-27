@@ -1,0 +1,102 @@
+unit TestUnit2;
+
+interface
+uses
+  DUnitX.TestFramework, Unit2, System.SysUtils;
+
+type
+
+  [TestFixture]
+  TestTAvaliacao = class(TObject)
+  strict private
+    FAvaliacao: TAvaliacao;
+  private
+  public
+    [Setup]
+    procedure Setup;
+    {O setup cria o objeto FAvaliacao, que é instância da classe TAvaliacao, para
+     ser utilizado durante a realização dos testes.}
+    [TearDown]
+    procedure TearDown;
+     {O TearDown irá liberar o espaço de memória alocado para o objeto criado durante
+      o método setup.}
+    [Test]
+    procedure TestCalculaIMC;
+
+
+    // Teste parametrizado com base nos atributos passados na interface do método
+    [TestCase('Test00','1.77,80,29,25.54')]
+    [TestCase('Test01','1.80,80,30,24.69')]
+    [TestCase('Test02','1.75,120,19,39.18')]
+    [TestCase('Test03','1.56,70,51,28.76')]
+    [TestCase('Test04','1.65,65,20,23.88')]
+    [TestCase('Test05','2.00,100,25,25.00')]
+
+    procedure TestCalculaIMC_Automatico(pAltura, pPeso: Currency; pIdade: integer; resuldado: Extended);
+
+    [Test]
+    procedure TestIMCIdadeMenor18;
+
+
+    [TestCase('Test01','19,17,Não disponível')]
+    [TestCase('Test02','18,18,Abaixo do Peso')]
+    [TestCase('Test03','22,22,Peso Normal')]
+    [TestCase('Test04','25,35,Sobrepeso')]
+    [TestCase('Test05','30,35,Obesidade I')]
+    [TestCase('Test06','39,59,Obesidade II')]
+    [TestCase('Test07','40,59,Obesidade III')]
+    [TestCase('Test08','21,60,Abaixo do Peso')]
+    [TestCase('Test09','22,60,Peso Normal')]
+    [TestCase('Test10','27,60,Acima do Peso')]
+
+    // Teste parametrizado com base nos atributos passados na interface do método
+    procedure TestRetornaClassificacaoIMC(pIMC: Currency; pIdade: Integer; _Result: string);
+  end;
+
+implementation
+
+procedure TestTAvaliacao.Setup;
+begin
+  FAvaliacao := TAvaliacao.Create;
+end;
+
+procedure TestTAvaliacao.TearDown;
+begin
+  FAvaliacao.Free;
+  FAvaliacao := nil;
+end;
+
+procedure TestTAvaliacao.TestCalculaIMC; //Teste padrão com valores dentro do codigo do teste
+var R: Extended;
+begin
+  R := FAvaliacao.CalculaIMC(1.77,80,29);
+  Assert.AreEqual(25,54, R);
+end;
+
+procedure TestTAvaliacao.TestCalculaIMC_Automatico(pAltura, pPeso: Currency;
+  pIdade: integer; resuldado: Extended);
+var R: Extended;
+begin
+  R := FAvaliacao.CalculaIMC(pAltura, pPeso, pIdade);
+  Assert.AreEqual(resuldado, R);
+end;
+
+procedure TestTAvaliacao.TestIMCIdadeMenor18;
+begin
+  Assert.WillRaise(procedure
+                   begin
+                     FAvaliacao.CalculaIMC(1.77,80,17)
+                   end, EFaixaEtariaIndisponivel);
+end;
+
+procedure TestTAvaliacao.TestRetornaClassificacaoIMC(pIMC: Currency; pIdade: Integer; _Result: string);
+var
+  R: string;
+begin
+  R := FAvaliacao.RetornaClassificacaoIMC(pIMC,pIdade);
+  Assert.AreEqual(_Result, R);
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TestTAvaliacao);
+end.

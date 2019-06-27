@@ -1,0 +1,58 @@
+unit TestUnit;
+
+interface
+uses
+  DUnitX.TestFramework;
+
+type
+
+  [TestFixture]
+  TestTAvaliacao = class(TObject)
+
+  public
+    [Setup] //Cria o objeto FAvaliacao, que é instância da classe TAvaliacao
+    procedure Setup;
+
+    [TearDown] //Libera o espaço de memória alocado
+    procedure TearDown;
+    // Sample Methods
+    // Simple single Test
+    [Test]
+    procedure Test1;
+    // Test with TestCase Attribute to supply parameters.
+    [Test]
+    [TestCase('Test01','19,17, Não Disponível')]
+    [TestCase('Test02','18,18, Abaixo do Peso')]
+    [TestCase('Test03','22,22,Peso Normal')]
+    [TestCase('Test04','25,35,Sobrepeso')]
+    [TestCase('Test05','30,35,Obesidade I')]
+    [TestCase('Test06','39,59,Obesidade II')]
+    [TestCase('Test07','40,59,Obesidade III')]
+    [TestCase('Test08','21,60,Abaixo do Peso')]
+    [TestCase('Test09','22,60,Peso Normal')]
+    [TestCase('Test10','27,60,Acima do Peso')]
+
+     procedure TestRetornaClassificacaoIMC(pIMC: Currency; pIdade: Integer; _Result: string);
+  end;
+
+implementation
+
+procedure TestTAvaliacao.Setup;
+begin
+end;
+
+procedure TestTAvaliacao.TearDown;
+begin
+end;
+
+procedure TestTAvaliacao.Test1;
+begin
+end;
+
+procedure TestTAvaliacao.TestRetornaClassificacaoIMC((pIMC: Currency; pIdade: Integer; _Result: string;
+begin
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TestTAvaliacao);
+end.

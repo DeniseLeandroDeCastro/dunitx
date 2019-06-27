@@ -1,0 +1,142 @@
+unit uIMCAvaliacao;
+
+interface
+
+uses
+  vcl.Dialogs, SysUtils, Math;
+
+type
+   EFaixaEtariaIndisponivel = Class(Exception);
+
+  TAvaliacao = class(TObject)
+  private
+    { private declarations }
+    // fields
+    FIdade: Integer;
+    FPeso: Double;
+    FAltura: Double;
+    FIMC: Double;
+    FClassIMC: string;
+    // getters
+    function GetIdade: Integer;
+    function GetPeso: Double;
+    function GetAltura: Double;
+    function GetIMC: Double;
+    function GetClassIMC: string;
+    // setters
+    procedure SetIdade(const Value: Integer);
+    procedure SetPeso(const Value: Double);
+    procedure SetAltura(const Value: Double);
+    procedure SetIMC(const Value: Double);
+    procedure SetClassIMC(const Value: String);
+  protected
+    { protected declarations }
+  public
+    { public declarations }
+    // encapsulamento
+    property Idade: Integer read GetIdade write SetIdade;
+    property Peso: Double read GetPeso write SetPeso;
+    property Altura: Double read GetAltura write SetAltura;
+    property IMC: Double read GetIMC write SetIMC;
+    property ClassIMC: String read GetClassIMC write SetClassIMC;
+    // metodos
+    function CalculaIMC(pAltura, pPeso: Currency; pIdade: integer):Currency;
+    function RetornaClassificacaoIMC(pIMC: Double; pIdade: integer): string;
+  published
+    { published declarations }
+  end;
+
+
+implementation
+
+{ TAvaliacao }
+
+function TAvaliacao.CalculaIMC(pAltura, pPeso: Currency; pIdade: integer):Currency;
+begin
+  if pIdade < 18 then
+    raise EFaixaEtariaIndisponivel.Create('Faixa etária indisponível.')
+  else
+    Result := SimpleRoundTo((pPeso / (pAltura * pAltura)), -2);
+end;
+
+function TAvaliacao.RetornaClassificacaoIMC(pIMC: Double; pIdade: integer): string;
+begin
+  if (pIdade < 18) then
+    Result := 'Não disponível'
+  else if ((pIdade >= 18) and (pIdade < 60)) then
+  begin
+    if pIMC < 18.5 then
+      Result := 'Abaixo do Peso'
+    else if (pIMC >= 18.5) and (pIMC < 25) then
+      Result := 'Peso Normal'
+    else if (pIMC >= 25) and (pIMC < 30) then
+      Result := 'Sobrepeso'
+    else if (pIMC >= 30) and (pIMC < 35) then
+      Result := 'Obesidade I'
+    else if (pIMC >= 35) and (pIMC < 40) then
+      Result := 'Obesidade II'
+    else
+      Result := 'Obesidade III';
+  end
+  else if (pIdade >= 60) then
+  begin
+    if pIMC < 22 then
+      Result := 'Abaixo do Peso'
+    else if (pIMC >= 22) and (pIMC < 27) then
+      Result := 'Peso Normal'
+    else
+      Result := 'Acima do peso';
+  end;
+end;
+
+function TAvaliacao.GetAltura: Double;
+begin
+  Result := FAltura;
+end;
+
+function TAvaliacao.GetClassIMC: string;
+begin
+  Result := FClassIMC;
+end;
+
+function TAvaliacao.GetIdade: Integer;
+begin
+  Result := FIdade;
+end;
+
+function TAvaliacao.GetIMC: Double;
+begin
+  Result := FIMC;
+end;
+
+function TAvaliacao.GetPeso: Double;
+begin
+  Result := FPeso;
+end;
+
+procedure TAvaliacao.SetAltura(const Value: Double);
+begin
+  FAltura := Value;
+end;
+
+procedure TAvaliacao.SetClassIMC(const Value: String);
+begin
+  FClassIMC := Value;
+end;
+
+procedure TAvaliacao.SetIdade(const Value: Integer);
+begin
+  FIdade := Value;
+end;
+
+procedure TAvaliacao.SetIMC(const Value: Double);
+begin
+  FIMC := Value;
+end;
+
+procedure TAvaliacao.SetPeso(const Value: Double);
+begin
+  FPeso := Value;
+end;
+
+end.

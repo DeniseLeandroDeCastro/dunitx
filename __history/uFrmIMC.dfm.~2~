@@ -1,0 +1,182 @@
+object Form1: TForm1
+  Left = 603
+  Top = 185
+  Caption = 'frmIMC'
+  ClientHeight = 417
+  ClientWidth = 306
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clNavy
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 16
+  object Label1: TLabel
+    Left = 8
+    Top = 56
+    Width = 59
+    Height = 16
+    Caption = 'Peso (kg):'
+  end
+  object Label2: TLabel
+    Left = 9
+    Top = 103
+    Width = 64
+    Height = 16
+    Caption = 'Altura (m):'
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 152
+    Width = 37
+    Height = 16
+    Caption = 'Idade:'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 320
+    Width = 27
+    Height = 16
+    Caption = 'IMC:'
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 366
+    Width = 78
+    Height = 16
+    Caption = 'Classifica'#231#227'o:'
+  end
+  object edtPeso: TEdit
+    Left = 8
+    Top = 72
+    Width = 290
+    Height = 24
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtAltura: TEdit
+    Left = 8
+    Top = 122
+    Width = 290
+    Height = 24
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnCalcular: TButton
+    Left = 8
+    Top = 208
+    Width = 145
+    Height = 39
+    Caption = 'Calcular'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnCalcularClick
+  end
+  object edtIdade: TEdit
+    Left = 8
+    Top = 167
+    Width = 290
+    Height = 24
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object edtIMC: TEdit
+    Left = 8
+    Top = 339
+    Width = 290
+    Height = 24
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object edtClassificacao: TEdit
+    Left = 8
+    Top = 385
+    Width = 290
+    Height = 24
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object btnLimpar: TButton
+    Left = 153
+    Top = 208
+    Width = 145
+    Height = 39
+    Caption = 'Limpar'
+    TabOrder = 6
+    OnClick = btnLimparClick
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 305
+    Height = 41
+    Caption = #205'ndice de Massa Corporal - I.M.C.'
+    Color = clMenuHighlight
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 264
+    Width = 305
+    Height = 41
+    Caption = 'Resultado'
+    Color = clMenuHighlight
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 8
+  end
+end
